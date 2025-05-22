@@ -1,0 +1,56 @@
+Java Installation
+Update package index: sudo apt-get update.
+Install OpenJDK 8: sudo apt-get install openjdk-8-jdk.
+Set Java environment variables in .bashrc_profile.
+
+Hadoop Installation
+Download Hadoop: wget https://archive.apache.org/dist/hadoop/common/hadoop-2.6.5/hadoop-2.6.5.tar.gz.
+Extract Hadoop: tar xvzf hadoop-2.6.5.tar.gz.
+Set up environment variables in hadoop_env.sh.
+
+Configure Hadoop XML files (core-site.xml, hdfs-site.xml, mapred-site.xml, yarn-site.xml, slaves).
+Set up hosts and slaves file.
+Update .profile with Hadoop environment variables.
+Format Namenode on Master
+Format namenode: hadoop namenode -format.
+Start Hadoop services: start-dfs.sh.
+Verify processes: jps.
+
+Maven Installation
+Install Maven: sudo apt-get install maven.
+Update Maven settings in settings.xml.
+
+MySQL Installation
+Install MySQL server and client.
+Secure MySQL installation.
+Create MySQL user for Oozie.
+
+Oozie Installation
+Download Oozie: wget https://archive.apache.org/dist/oozie/4.3.1/oozie-4.3.1.tar.gz.
+Extract Oozie: tar -xf oozie-4.3.1.tar.gz.
+Modify pom.xml for Java and Hadoop versions.
+
+Configure Oozie XML files (oozie-site.xml, libext).
+Set up WAR file: bin/oozie-setup.sh prepare-war.
+Set up oozie-env.sh.
+Start HistoryServer.
+Upload Oozie share to HDFS.
+
+Copy Data to EC2 Namenode
+Use scp to copy data from localhost to EC2 namenode.
+Unzip Data
+Unzip the uploaded data files.
+Upload Input Files to HDFS
+Create an input folder on HDFS: hdfs dfs -mkdir /user/ubuntu/input.
+Upload input files to HDFS: hdfs dfs -put /home/ubuntu/data /user/ubuntu/input.
+Upload Flight Folder to HDFS
+Upload the flight folder (containing workflow.xml, job.properties, and lib directory) to HDFS.
+
+Run Map-Reduce Jobs on Oozie
+Run Map-Reduce jobs on Oozie using bin/oozie job -oozie http://localhost:11000/oozie -config /user/ubuntu/flight/job.properties -run.
+
+Check Job Status
+Check job information using bin/oozie job -oozie http://localhost:11000/oozie -info <job_id>.
+Monitor job status via Oozie UI.
+
+Make sure to replace placeholder IP addresses with the actual IP addresses of your EC2 instances.

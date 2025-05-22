@@ -1,0 +1,7 @@
+Project_Report.pdf
+*.class
+*.log
+*.tmp
+__pycache__/
+.ipynb_checkpoints/
+.DS_Store
