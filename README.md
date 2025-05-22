@@ -44,13 +44,13 @@ Airlines with 0% on-time:
 ![Workflow Graph](public/worflow.png)
 
 ### Execution Metrics
-![Cluster Scaling](metrics.png)
+![Cluster Scaling](public/metrics.png)
 
 ### Time vs Years
-![Year Scaling](timevsyear.png)
+![Year Scaling](public/timevsyear.png)
 
 ### Output Snapshot
-![Output Snapshot](output.png)
+![Output Snapshot](public/output.png)
 
 ## ❌ Ignored Files
 
