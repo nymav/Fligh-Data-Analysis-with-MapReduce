@@ -41,7 +41,7 @@ Airlines with 0% on-time:
 ## 🖼️ Visuals
 
 ### Workflow Graph
-![Workflow Graph](public/worflow.png)
+![Workflow Graph](public/workflow.png)
 
 ### Execution Metrics
 ![Cluster Scaling](public/metrics.png)
