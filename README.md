@@ -60,7 +60,6 @@ Airlines with 0% on-time:
 ## 👨‍💻 Author
 
 Nikhil Yarra  
-DS-644 Big Data Project
 
 ---
 
